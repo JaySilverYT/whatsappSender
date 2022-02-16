@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello SendMassiveMessageController!{% endblock %}
+
+{% block body %}
+
+    <div class="mask d-flex align-items-center h-100 gradient-custom">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-9 col-xl-7">
+                    <div class="card">
+                        <div class="card-body p-4 p-md-5">
+                            <h3 class="mb-4 pb-2">Mensaje Massivo</h3>
+
+                            <form action="{{ path('send-massive-message') }}" method="POST">
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+
+                                        <div class="form-control-sm">
+                                            <input type="text" id="token" name="token" class="form-control" value="{{ app.session.get('token') }}" required/>
+                                            <label class="form-label" for="token">Token</label>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+
+                                        <div class="form-control-sm">
+                                            <input type="text" id="instance" name="instance" class="form-control" value="{{ app.session.get('instance') }}" required/>
+                                            <label class="form-label" for="instance">Instancia</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 mb-3">
+                                        <div class="form-control-sm">
+                                            <textarea id="message" name="message" rows="4" cols="100" required></textarea>
+                                            <label class="form-label" for="message">Mensaje</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4">
+                                    <input class="btn btn-warning btn-lg" type="submit" value="Enviar Mensaje Massivo" />
+                                </div>
+                        </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+{% endblock %}

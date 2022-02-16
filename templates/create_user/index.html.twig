@@ -1,0 +1,93 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Crear Usuario {% endblock %}
+
+{% block body %}
+
+        <div class="mask d-flex align-items-center h-100 gradient-custom">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-9 col-xl-7">
+                        <div class="card">
+                            <div class="card-body p-4 p-md-5">
+                                <h3 class="mb-4 pb-2">Crear Usuario</h3>
+
+                                <form action="{{ path('create-user') }}" method="POST">
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+
+                                            <div class="form-control-sm">
+                                                <input type="text" id="firstName" name="firstname" class="form-control" />
+                                                <label class="form-label" for="firstName">Nombre</label>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+
+                                            <div class="form-control-sm">
+                                                <input type="text" id="secondname" name="surname1" class="form-control" />
+                                                <label class="form-label" for="lastName">Primer Apellido</label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+
+                                            <div class="form-control-sm">
+                                                <input type="text" id="thirdname" name="surname2" class="form-control" />
+                                                <label class="form-label" for="firstName">Segundo Apellido</label>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+
+                                            <div class="form-control-sm">
+                                                <input type="email" id="email" name="mail" class="form-control" />
+                                                <label class="form-label" for="lastName">Email</label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+
+                                            <div class="form-control-sm">
+                                                <input
+                                                        type="date"
+                                                        class="form-control"
+                                                        id="birthdayDate"
+                                                        name="birthday"
+                                                />
+                                                <label for="birthdayDate" class="form-label">Fecha de nacimiento</label>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-md-6 mb-4">
+
+                                            <div class="form-control-sm">
+                                                <input type="tel" id="email" name="phone" class="form-control" />
+                                                <label class="form-label" for="lastName">Telefono (Debe empezar por +34)</label>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                            <div class="mt-4">
+                                                <input class="btn btn-warning btn-lg" type="submit" value="Crear Usuario" />
+                                            </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
