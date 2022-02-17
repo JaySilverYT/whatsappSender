@@ -74,7 +74,7 @@
                                         data-mdb-toggle="dropdown"
                                         aria-expanded="false"
                                 >
-                                    Enviar Mensaje
+                                    Mensajes
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                     <li>
@@ -85,6 +85,28 @@
                                     </li>
                                 </ul>
                             </li>
+
+                            <li class="nav-item dropdown">
+                                <a
+                                        class="nav-link dropdown-toggle"
+                                        href="#"
+                                        id="navbarDropdownMenuLink"
+                                        role="button"
+                                        data-mdb-toggle="dropdown"
+                                        aria-expanded="false"
+                                >
+                                    Descargas
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li>
+                                        <a class="dropdown-item" href="{{ path('log') }}">Log (.csv)</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="{{ path('log-xlsx') }}">Log (.xlsx)</a>
+                                    </li>
+                                </ul>
+                            </li>
+
 
                         </ul>
                         <!-- Left links -->

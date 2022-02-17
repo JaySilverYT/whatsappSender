@@ -28,7 +28,7 @@ class Log
     private $message;
 
     /**
-     * @ORM\Column(type="string", length=10)
+     * @ORM\Column(type="string", length=50)
      */
     private $token_user_emisor;
 
